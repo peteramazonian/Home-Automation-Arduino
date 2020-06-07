@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <stylesheets>
+      <URL value="@/Styles.css" />
+   </stylesheets>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane fx:id="background" prefHeight="1100.0" prefWidth="1800.0">
+         <children>
+            <!--<Label fx:id="text" layoutX="1465.0" layoutY="285.0" text="Text">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>-->
+            <Pane fx:id="header" prefHeight="300.0" prefWidth="1800.0" />
+            <Label fx:id="headerText" layoutX="622.0" layoutY="90.0" text="Smart Home" textFill="WHITE">
+               <font>
+                  <Font size="100.0" />
+               </font>
+            </Label>
+            <HBox layoutY="400.0" prefHeight="660.0" prefWidth="1800.0" spacing="80.0">
+               <children>
+                  <VBox fx:id="zen" alignment="CENTER" prefHeight="500.0" prefWidth="500.0">
+                     <children>
+                        <Label prefWidth="172.0" text="Z" textFill="#007cc0">
+                           <font>
+                              <Font size="250.0" />
+                           </font>
+                        </Label>
+                        <Label text="Zen Mode" textFill="#007cc0">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="600.0" prefWidth="600.0">
+                     <children>
+                        <JFXToggleButton fx:id="light1" size="30.0" text="Main Light1">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </JFXToggleButton>
+                        <JFXToggleButton fx:id="light2" size="30.0" text="Main Light2">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </JFXToggleButton>
+                        <JFXToggleButton fx:id="bed" size="30.0" text="BedSide Lamp">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </JFXToggleButton>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="461.0" spacing="75.0">
+                           <children>
+                              <Label text="Temp. :">
+                                 <font>
+                                    <Font size="50.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="val" text="Value">
+                                 <font>
+                                    <Font size="50.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="car" alignment="CENTER" prefHeight="500.0" prefWidth="500.0" spacing="30.0">
+                     <children>
+                        <ImageView fitHeight="248.0" fitWidth="248.0">
+                           <image>
+                              <Image url="@car.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Vehicle might be at Risk" textFill="#db3552">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
